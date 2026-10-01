@@ -28,7 +28,7 @@ test.describe('automation_test_store_scenario2',()=>{
     });
 
 
-    test('s2_tc_01_user placing orders via categories and sub-categories',async({categories,subcategories,conditionerPage,cartPage,confirmOrderButton,page})=>{
+    test('s2_tc_01_user placing orders via categories and sub-categories',async({categories,subcategories,conditionerPage,cartPage,confirmOrderButton})=>{
          
         await categories.hairCare();
         await subcategories.conditioner();
@@ -39,7 +39,7 @@ test.describe('automation_test_store_scenario2',()=>{
 
 
     });
-    test('s2_tc002_user able to add product to cart',async ({categories,subcategories,conditionerPage,cartPage,page})=>{
+    test('s2_tc002_user able to add product to cart',async ({categories,subcategories,conditionerPage,cartPage})=>{
         
         await categories.hairCare();
         await subcategories.conditioner();
@@ -47,7 +47,7 @@ test.describe('automation_test_store_scenario2',()=>{
         await conditionerPage.highlightingExpressionAddedToCart();  
         await cartPage.verifyCheckoutButtonIsVisible();
 });
-    test('s2_tc_003 quantity check on cart for same product added multiple times',async({categories,subcategories,conditionerPage,cartPage,page})=>{
+    test('s2_tc_003 quantity check on cart for same product added multiple times',async({categories,subcategories,conditionerPage,cartPage})=>{
         
         await categories.hairCare();
         await subcategories.conditioner();
@@ -56,7 +56,7 @@ test.describe('automation_test_store_scenario2',()=>{
         await conditionerPage.highlightingExpressionAddedToCart();
         await cartPage.verifyCartQuantity();
     });
-    test('s2_tc_004 customise cart by removing  ',async({categories,subcategories,conditionerPage,cartPage,page})=>{
+    test('s2_tc_004 customise cart by removing  ',async({categories,subcategories,conditionerPage,cartPage})=>{
         
         await categories.hairCare();
         await subcategories.conditioner();

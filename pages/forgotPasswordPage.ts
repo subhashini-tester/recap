@@ -1,7 +1,7 @@
 import { Page ,expect} from "@playwright/test";
 import { forgotPassword } from "../locators/forgotPassword";   
 import * as datas from "../test_data/forgotPassword.json" ;
-import { footerLocators } from "../locators/footerLocators";
+
 
 export class ForgotPassword{
     constructor(private page:Page){}
